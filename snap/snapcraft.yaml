@@ -1,0 +1,75 @@
+name: gtk-theme-vimix
+build-base: core24
+base: bare
+version: 'test'
+platforms:
+  all:
+    build-on: [amd64]
+    build-for: [all]
+summary: Vimix GTK theme
+description: |
+  A Snap that allows you to use Vimix GTK themes in Snap apps
+grade: stable
+confinement: strict
+
+slots:
+  gtk-2-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/gtk2/Vimix-amethyst
+        - $SNAP/share/gtk2/Vimix-beryl
+        - $SNAP/share/gtk2/Vimix-dark-amethyst
+        - $SNAP/share/gtk2/Vimix-dark-beryl
+        - $SNAP/share/gtk2/Vimix-dark-doder
+        - $SNAP/share/gtk2/Vimix-dark-grey
+        - $SNAP/share/gtk2/Vimix-dark-jade
+        - $SNAP/share/gtk2/Vimix-dark-ruby
+        - $SNAP/share/gtk2/Vimix-doder
+        - $SNAP/share/gtk2/Vimix-grey
+        - $SNAP/share/gtk2/Vimix-jade
+        - $SNAP/share/gtk2/Vimix-light-amethyst
+        - $SNAP/share/gtk2/Vimix-light-beryl
+        - $SNAP/share/gtk2/Vimix-light-doder
+        - $SNAP/share/gtk2/Vimix-light-grey
+        - $SNAP/share/gtk2/Vimix-light-jade
+        - $SNAP/share/gtk2/Vimix-light-ruby
+        - $SNAP/share/gtk2/Vimix-ruby
+  gtk-3-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/themes/Vimix-amethyst
+        - $SNAP/share/themes/Vimix-beryl
+        - $SNAP/share/themes/Vimix-dark-amethyst
+        - $SNAP/share/themes/Vimix-dark-beryl
+        - $SNAP/share/themes/Vimix-dark-doder
+        - $SNAP/share/themes/Vimix-dark-grey
+        - $SNAP/share/themes/Vimix-dark-jade
+        - $SNAP/share/themes/Vimix-dark-ruby
+        - $SNAP/share/themes/Vimix-doder
+        - $SNAP/share/themes/Vimix-grey
+        - $SNAP/share/themes/Vimix-jade
+        - $SNAP/share/themes/Vimix-light-amethyst
+        - $SNAP/share/themes/Vimix-light-beryl
+        - $SNAP/share/themes/Vimix-light-doder
+        - $SNAP/share/themes/Vimix-light-grey
+        - $SNAP/share/themes/Vimix-light-jade
+        - $SNAP/share/themes/Vimix-light-ruby
+        - $SNAP/share/themes/Vimix-ruby
+parts:
+  gtk-2-themes:
+    plugin: dump
+    source: https://github.com/Kyuyrii/gtk-theme-vimix-snap/releases/download/gtk-theme-vimix/vimix-gtk-theme.zip
+    organize:
+      gtk-themes: share/gtk2
+    prime:
+      - share/gtk2/*/gtk-2.0
+  gtk-3-themes:
+    plugin: dump
+    source: https://github.com/Kyuyrii/gtk-theme-vimix-snap/releases/download/gtk-theme-vimix/vimix-gtk-theme.zip
+    organize:
+      gtk-themes: share/themes
+    prime:
+      - share/themes/*/gtk-3.0
+      - share/themes/*/gtk-4.0
