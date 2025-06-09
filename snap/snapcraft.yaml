@@ -1,7 +1,7 @@
 name: gtk-theme-vimix
 build-base: core24
 base: bare
-version: 'test'
+version: '2025-06-09'
 platforms:
   all:
     build-on: [amd64]
@@ -60,14 +60,14 @@ slots:
 parts:
   gtk-2-themes:
     plugin: dump
-    source: https://github.com/Kyuyrii/gtk-theme-vimix-snap/releases/download/gtk-theme-vimix/vimix-gtk-theme.zip
+    source: https://github.com/Kyuyrii/gtk-theme-vimix-snap/releases/download/gtk-theme-vimix/gtk-theme-vimix-snap-creation-files_2025-06-09.deb.deb
     organize:
       gtk-themes: share/gtk2
     prime:
       - share/gtk2/*/gtk-2.0
   gtk-3-themes:
     plugin: dump
-    source: https://github.com/Kyuyrii/gtk-theme-vimix-snap/releases/download/gtk-theme-vimix/vimix-gtk-theme.zip
+    source: https://github.com/Kyuyrii/gtk-theme-vimix-snap/releases/download/gtk-theme-vimix/gtk-theme-vimix-snap-creation-files_2025-06-09.deb.deb
     organize:
       gtk-themes: share/themes
     prime:
