@@ -60,7 +60,7 @@ slots:
 parts:
   gtk-2-themes:
     plugin: dump
-    source: https://github.com/Kyuyrii/gtk-theme-vimix-snap/releases/download/gtk-theme-vimix/gtk-theme-vimix-snap-creation-files_2025-06-09.deb.
+    source: https://github.com/Kyuyrii/gtk-theme-vimix-snap/releases/download/gtk-theme-vimix/gtk-theme-vimix-snap-creation-files_2025-06-09.deb
     organize:
       usr/share/themes: share/gtk2
     prime:
