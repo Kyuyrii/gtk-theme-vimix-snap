@@ -69,7 +69,7 @@ parts:
     plugin: dump
     source: https://github.com/Kyuyrii/gtk-theme-vimix-snap/releases/download/gtk-theme-vimix/gtk-theme-vimix-snap-creation-files_2025-06-09.deb.deb
     organize:
-      gtk-themes: share/themes
+      usr/share/themes: share/themes
     prime:
       - share/themes/*/gtk-3.0
       - share/themes/*/gtk-4.0
